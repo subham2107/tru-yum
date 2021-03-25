@@ -11,6 +11,7 @@ const cartSchema = new Schema({
       type: Date,
       default: Date.now()
     }, 
+    session_id: mongoose.ObjectId,
     items: [
       {
         product_id: mongoose.ObjectId
