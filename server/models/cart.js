@@ -13,7 +13,7 @@ const cartSchema = new Schema({
     }, 
     items: [
       {
-        product_id: ObjectId
+        product_id: mongoose.ObjectId
       }, 
       {
         quantity: Number
@@ -27,15 +27,12 @@ const cartSchema = new Schema({
     ],
 
     price: {
-      mrp: Decimal128,
+      mrp: mongoose.Decimal128,
 
-      list_price: Decimal128,
+      list_price: mongoose.Decimal128,
 
-      discount: Decimal128
-         
    },
-
-    
+   
 });
 
 module.exports = mongoose.model('Cart', cartSchema);

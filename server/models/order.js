@@ -12,10 +12,10 @@ const orderSchema = new Schema({
       default: Date.now()
     }, 
     
-    user_id: ObjectId,
+    user_id: mongoose.ObjectId,
     items: [
       {
-        product_id: ObjectId
+        product_id: mongoose.ObjectId
       }, 
       {
         quantity: Number
@@ -27,8 +27,8 @@ const orderSchema = new Schema({
         category: { type: String,trim: true }
       }
     ],
-    amount: String,
-    status: Boolean,
+    amount: mongoose.Decimal128,
+    status: String,
     
 });
 
