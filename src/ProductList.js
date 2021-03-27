@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductDetails from './ProductDetails';
 
 class ProductList extends React.Component {
   constructor(props) {
@@ -12,13 +13,20 @@ class ProductList extends React.Component {
         .then(response => {
             console.log(response)
             console.log("aaaa");
-            this.setState({developer: response});
+            for(let i=0;i<(response).length;i++)
+           {
+               console.log((response[i].title));
+               const title = response[i].title;
+               <ProductDetails title = {title} quantity={response[i].quantity} />
+           }
+            this.setState({category: response});
         });
     }
 
     render() {
         return (
-            <div>Product data: {JSON.stringify(this.state.developer)}</div>
+          
+            <div>Product data: {JSON.stringify(this.state.category)}</div>
         );
     }
 }

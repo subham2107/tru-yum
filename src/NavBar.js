@@ -11,10 +11,22 @@ function SearchBar(){
     </div>);
 }
 function NavBar(){
-  const onLoginClick = () => {
-    console.log("hi");
+  const onLoginClick = () =>{
     return (
       window.location = '/login'
+    );
+  }
+  const categoriesClick = (category) => {
+    console.log('dsjvjvnvx');
+    console.log(`hi ${category}`);
+    if(category==='Fish/Meat/Eggs')
+    {
+      return (
+        window.location = `/products/categories/Fish Meat Eggs`
+     );
+    }
+    return (
+      window.location = `/products/categories/${category}`
    );
 
 }
@@ -25,9 +37,9 @@ function NavBar(){
       <div class="dropdown-nav">Categories <span><img class="dropdown-arrow" src="./images/down-arrow.svg"/></span>
   
   <div class="dropdown-content">
-    <a href="#">Fruits and vegetables</a>
-    <a href="#">Fish/Meat/Eggs</a>
-    <a href="#">Cooked foods</a>
+  <a onClick={() => categoriesClick('Fruits and vegetables')}>Fruits and vegetables</a>
+  <a onClick={() => categoriesClick('Fish/Meat/Eggs')}>Fish/Meat/Eggs</a>
+  <a onClick={() => categoriesClick('Cooked food')}>Cooked food</a>
  
   </div>
   </div>
