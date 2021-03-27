@@ -6,7 +6,7 @@ function Product (){
     <div>
       <h1 style ={{textAlign: "center"}}>Check out our products here</h1>
       <main class="main-content">
-<div class="card" style={{boxShadow: "1px 2px 3px 2px red"}}>
+<div class="card">
   <a href="https://my-encoder-decoder.netlify.app/base64encode" target="_blank">
   <div class="img-wrapper">
   <img class="card-img" src="./images/potato.jpg"/>
@@ -15,7 +15,7 @@ function Product (){
 </div>
 
 
-<div class="card" style={{boxShadow: "1px 2px 3px 2px orange"}}>
+<div class="card" >
   <a href="https://my-color-converter.netlify.app/rgb-hex" target="_blank">
   <div class="img-wrapper">
   <img class="card-img" src="./images/onion.jpg"/>
@@ -23,7 +23,7 @@ function Product (){
   <p>Onion</p> </a>
 </div>
 
-<div class="card" style={{boxShadow: "1px 2px 3px 2px violet"}}>
+<div class="card" >
   <a href="https://my-time-stamp-converter.netlify.app/epochtohuman" target="_blank">
   <div class="img-wrapper">
   <img class="card-img" src="./images/cabbage.jpg"/>
@@ -32,7 +32,7 @@ function Product (){
   <p>Cabbage</p></a>
 </div>
 
-<div class="card" style={{boxShadow: "1px 2px 3px 2px blue"}}>
+<div class="card">
   <a href="https://my-number-base-converter.netlify.app/decimaltobinary" target="_blank">
   <div class="img-wrapper">
   <img class="card-img" src="./images/cauliflower.jpg"/>
@@ -40,7 +40,7 @@ function Product (){
   <p>Cauliflower</p></a>
 </div>
 
-<div class="card" style={{boxShadow: "1px 2px 3px 2px black"}}>
+<div class="card" >
   <a href="https://my-string-utilities.netlify.app/stringutilities" target="_blank">
   <div class="img-wrapper">
   <img class="card-img" src="./images/carrot.jpg"/>
@@ -49,7 +49,7 @@ function Product (){
 </div>
 
   
-<div class="card" style={{boxShadow: "1px 2px 3px 2px green"}}>
+<div class="card" >
   <a href="https://my-unit-converter.netlify.app/temperature.html" target="_blank">
   <div class="img-wrapper">
   <img class="card-img" src="./images/banana.jpg"/>
@@ -57,7 +57,7 @@ function Product (){
   <p>Banana</p></a>
 </div>  
 
-<div class="card" style={{boxShadow: "1px 2px 3px 2px green"}}>
+<div class="card">
   <a href="https://my-unit-converter.netlify.app/temperature.html" target="_blank">
   <div class="img-wrapper">
   <img class="card-img" src="./images/apple.jpg"/>

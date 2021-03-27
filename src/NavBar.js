@@ -14,11 +14,7 @@ function NavBar(){
   const onLoginClick = () => {
     console.log("hi");
     return (
-    <Router>
-      <Switch>
-      <Route exact path="/" component={LoginSignup} />
-      </Switch>
-    </Router>
+      window.location = '/login'
    );
 
 }
@@ -36,9 +32,10 @@ function NavBar(){
   </div>
   </div>
   <SearchBar/>
+  <div><img class="cart-icon" src="./images/shopping_cart.png"/></div>
   <div>
     <span class="login" onClick={onLoginClick}>Login</span>
-    <span style={{margin: "0 10px 0 10px"}}>|</span>
+    <span style={{margin: "0 10px 0 10px"}}>/</span>
     <span class="signup">Signup</span>
   </div>
   

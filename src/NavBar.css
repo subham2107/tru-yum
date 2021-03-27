@@ -27,6 +27,13 @@
 
 }
 
+.cart-icon {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  padding-top: 20px;
+}
+
 .SearchInput {
   padding-left: 10px;
   width: 393px;
@@ -107,6 +114,7 @@
         line-height: 53px;
         background-color: white;
         position: sticky;
+        z-index: 999;
         top: 0;
         box-shadow: 1px 2px 2px rgb(0 0 0 / 10%), -1px -1px 2px rgb(0 0 0 / 8%);
         
@@ -116,3 +124,4 @@
     height: 10px;
     width: 10px
   }
+

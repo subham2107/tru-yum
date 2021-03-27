@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import HomePage from './HomePage';
+import LoginSignup from './LoginSignup';
 import Profile from './Profile';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -12,6 +13,7 @@ function App() {
             renders the first one that matches the current URL. */}
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/login" component={LoginSignup} />
           <Route exact path="/profile" component={Profile} />
         </Switch>
     </Router>
