@@ -1,4 +1,6 @@
 import React from 'react';
+import Footer from './Footer';
+import NavBar from './NavBar';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -49,11 +51,13 @@ class Profile extends React.Component {
 
   render() {
     return (<div className="Profile">
+      <NavBar/>
         <div>Email: {this.state.email}</div>
           <div>First Name: <input name="firstName" onInput={this.onInput} value={this.state.firstName || ''}></input></div>
           <div>Last Name: <input name="lastName" onInput={this.onInput} value={this.state.lastName || ''}></input></div>
           <div><input type="button" onClick={this.onUpdate} value="Update"></input></div>
           <div><input type="button" onClick={this.onLogout} value="Logout"></input></div>
+          <Footer/>
       </div>);
   }
 }

@@ -1,0 +1,37 @@
+body {
+  margin:0;
+  background-color: #f6f8fa;
+  font-family: 'Work Sans', sans-serif;
+  color:rgb(77, 80, 83);
+}
+
+.footer-inside{
+  background-color:#3f3d56;
+}
+
+.footer-info {
+  text-align: center;
+  color:white;
+}
+
+.profile-heading {
+  padding-top: 10px;
+}
+
+.footer-wrapper {
+  min-height: 45px;
+}
+
+.footer-logo {
+  padding-bottom: 10px;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.middle-footer-logo {
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import LoginPage from './LoginPage';
+import HomePage from './HomePage';
 import Profile from './Profile';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -11,7 +11,7 @@ function App() {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route exact path="/" component={LoginPage} />
+          <Route exact path="/" component={HomePage} />
           <Route exact path="/profile" component={Profile} />
         </Switch>
     </Router>

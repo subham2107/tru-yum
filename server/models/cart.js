@@ -14,15 +14,12 @@ const cartSchema = new Schema({
     session_id: mongoose.ObjectId,
     items: [
       {
-        product_id: mongoose.ObjectId
-      }, 
-      {
-        quantity: Number
-      }, 
-      {
-        title: { type: String,trim: true }
-      },  
-      {
+        product_id: mongoose.ObjectId,
+      
+        quantity: Number,
+      
+        title: { type: String,trim: true },
+      
         category: { type: String,trim: true }
       }
     ],
@@ -37,3 +34,18 @@ const cartSchema = new Schema({
 });
 
 module.exports = mongoose.model('Cart', cartSchema);
+
+items: [
+  {
+    product_id: mongoose.ObjectId
+  }, 
+  {
+    quantity: Number
+  }, 
+  {
+    title: { type: String,trim: true }
+  },  
+  {
+    category: { type: String,trim: true }
+  }
+]

@@ -1,6 +1,6 @@
 import React from 'react';
 
-class LoginPage extends React.Component {
+class LoginSignup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,7 +51,7 @@ class LoginPage extends React.Component {
 
   render() {
     return (
-      <div className="LoginPage">
+      <div className="LoginSignup">
         <form>
           <input placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input>
           <input placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input>
@@ -65,4 +65,4 @@ class LoginPage extends React.Component {
   }
 }
 
-export default LoginPage;
+export default LoginSignup;

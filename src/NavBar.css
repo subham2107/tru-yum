@@ -1,0 +1,118 @@
+.SearchBar {
+  background-color: #84c225;
+  height: 39px;
+  width: 400px;
+  border-radius: 2px;
+  display: flex;
+}
+
+.companyLogo a {
+  color:rgb(77, 80, 83);
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.logoY {
+  border-radius: 50%;
+  background-color: #84c225;
+}
+
+.login:hover {
+  cursor: pointer;
+
+}
+
+.signup:hover {
+  cursor: pointer;
+
+}
+
+.SearchInput {
+  padding-left: 10px;
+  width: 393px;
+  height: 30px;
+  border-radius: 2px;
+  margin: 3px 5px 5px 5px;
+  font-size: 15px;
+  border: none;
+}
+
+.SearchIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.SearchIcon:hover {
+  cursor: pointer;
+}
+
+.SearchIconWrapper {
+  padding-left: 5px;
+  height: 30px;
+  width: 35px;
+
+}
+#hamburger {
+  margin-top: 14px;
+}
+
+#hamburger:active{
+  background-color:#d4d4d4;
+
+}
+
+  .dropdown-content a {
+    display: block;
+    text-decoration: none;
+    min-width: 180px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 40px;
+    color:#555555;
+    background-color: #f6f8fa;
+    box-shadow: 1px 2px 2px rgb(0 0 0 / 10%), -1px -1px 2px rgb(0 0 0 / 8%);
+    
+  }
+  
+  .dropdown-content{
+    display: none;
+  }
+
+  .dropdown-content a:hover{
+    color:#84c225;
+    background-color: #e7e7e7; 
+  }
+  
+  .dropdown-nav:hover .dropdown-content{
+        display: block;
+        position: absolute; 
+          
+  } 
+
+  .dropdown-nav:hover{
+    cursor: pointer;
+    color:#84c225;
+    
+  }
+
+
+  
+
+  .navbar {
+    /*added flex wrap..change in all*/
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        line-height: 53px;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        box-shadow: 1px 2px 2px rgb(0 0 0 / 10%), -1px -1px 2px rgb(0 0 0 / 8%);
+        
+  } 
+
+  .dropdown-arrow{
+    height: 10px;
+    width: 10px
+  }
