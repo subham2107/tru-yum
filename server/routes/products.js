@@ -18,4 +18,18 @@ router.get('/:productId', (req, res) => {
   });
 });
 
+router.get('/categories/:categoryname', (req,res) => {
+  console.log("xxxxxxxxxx");
+  console.log(req.params.categoryname)
+  Product.find({ category: req.params.categoryname})
+  .then(user => {       
+         if(!user) {       
+            res.status(404).send();      
+         }
+         res.send(user);
+       }).catch((e) => {      
+          res.status(400).send(e);    
+       });
+});
+
 module.exports = router;
