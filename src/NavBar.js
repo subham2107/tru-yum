@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 function SearchBar(){
   return (<div class="SearchBar">
     <input className="SearchInput" type="text" placeholder="Search for products..."></input>
-    <div className="SearchIconWrapper"><img className="SearchIcon" src={'/images/search-24px.svg'} alt='searchIcon'/></div>
+    <div className="SearchIconWrapper"><img className="SearchIcon" src='/images/search-24px.svg' alt='searchIcon'/></div>
     </div>);
 }
 function NavBar(){

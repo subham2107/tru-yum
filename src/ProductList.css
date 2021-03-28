@@ -1,0 +1,17 @@
+.cardd {
+  text-align: center;
+  max-height:230px;
+  max-width:230px;
+  min-height:230px;
+  min-width:230px;
+  border-radius:2px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
+}
+
+.main-content2{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 50px;
+  justify-items: center;
+  }

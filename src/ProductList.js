@@ -60,22 +60,52 @@
 //export default ProductList;
 
 import React from 'react';
+import NavBar from './NavBar';
+import Banner from './Banner';
+import Footer from './Footer';
+import './ProductList.css';
+
+class ListingProduct extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    render (){
+        return (<div class="main-content2">
+            <div class="cardd">
+  {/* <a href="https://my-encoder-decoder.netlify.app/base64encode" target="_blank"/> */}
+  <div class="img-wrapperr">
+  <img class="card-imgg" src="./images/{this.props.title}.jpg"/>
+</div>
+</div>
+{/* <div>{this.props.title}</div>
+ <div>{this.props.quantity}</div>
+<div>{this.props.product_id}</div>  */}
+<div>{this.props.description}</div>
+
+
+            </div>
+            );
+    }
+    
+  }
+
+
 class ProductList extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
         products: [],
       };
-      this.getRandomUsers = this.getRandomUsers.bind(this);
+      this.getRandomProducts = this.getRandomProducts.bind(this);
     }
-    async getRandomUsers() {
+    async getRandomProducts() {
       const res = await fetch(`/api/products/categories/${this.props.match.params.cartegoryname}`);
       const data = await res.json();
       console.log(data)
       return data;
     }
     async componentDidMount() {
-      const products = await this.getRandomUsers();
+      const products = await this.getRandomProducts();
       console.log(products);
       this.setState({ products });
 
@@ -85,12 +115,17 @@ class ProductList extends React.Component {
     render() {
         return (
             <div>
-              {(this.state.products).map((user) => (
-                  <h1>
-                  title={user.title}
-                  quantity={user.quantity}
-                  </h1>
+                <NavBar/>
+              {(this.state.products).map((product) => (
+                  <ListingProduct
+                  title={product.title}
+                  description={product.description}
+                  quantity={product.quantity}
+                  product_id={product._id}
+                  price={product.price.mrp}
+                  />
               ))}
+              <Footer />
             </div>
         );
     }
