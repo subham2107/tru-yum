@@ -8,12 +8,12 @@ const productSchema = new Schema({
     quantity: { type: Number,default: 100},
     price: {
        mrp: {
-        type: mongoose.Decimal128,
+        type: Number,
         default: 0
       },
 
       list_price: {
-        type: mongoose.Decimal128,
+        type: Number,
         default: 0
       }       
     },

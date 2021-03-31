@@ -6,6 +6,8 @@ import LoginSignup from './LoginSignup';
 import Profile from './Profile';
 import ProductList from './ProductList';
 import ProductDetails from './ProductDetails';
+import AddtoCart from './AddtoCart';
+import MyCart from './MyCart';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -18,7 +20,9 @@ function App() {
           <Route exact path="/login" component={LoginSignup} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/products/categories/:cartegoryname" component={ProductList } />
-          <Route exact path="/products/categories/:cartegoryname/productDetails" component={ProductDetails} />
+          <Route exact path="/products/:productid" component={ProductDetails} />
+          <Route exact path="/cart/cartitems" component={MyCart} />
+          <Route exact path="/cart/:productid" component = {AddtoCart} />
         </Switch>
     </Router>
   );

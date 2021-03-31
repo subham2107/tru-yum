@@ -12,7 +12,7 @@ const paymentSchema = new Schema({
       default: Date.now()
     }, 
     
-    amount: Decimal128,
+    amount: Number,
     status: Boolean,
     method: String,
     order_details: String,

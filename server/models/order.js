@@ -27,7 +27,7 @@ const orderSchema = new Schema({
         category: { type: String,trim: true }
       }
     ],
-    amount: mongoose.Decimal128,
+    amount: Number,
     status: String,
     
 });

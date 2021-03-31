@@ -1,0 +1,11 @@
+.AddCartBtn {
+    margin-left: 20px;
+    margin-bottom: 30px;
+    height: 40px;
+    color: #414042;
+    font: 17px ProximaNovaA-Regular;
+    display: inline-block;
+    line-height: 2;
+    cursor: pointer;
+    
+}

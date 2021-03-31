@@ -11,10 +11,10 @@ const cartSchema = new Schema({
       type: Date,
       default: Date.now()
     }, 
-    session_id: mongoose.ObjectId,
+    
     items: [
       {
-        product_id: mongoose.ObjectId,
+        product_id: String,
       
         quantity: Number,
       
@@ -25,9 +25,9 @@ const cartSchema = new Schema({
     ],
 
     price: {
-      mrp: mongoose.Decimal128,
+      mrp: Number,
 
-      list_price: mongoose.Decimal128,
+      list_price: Number,
 
    },
    
@@ -35,17 +35,17 @@ const cartSchema = new Schema({
 
 module.exports = mongoose.model('Cart', cartSchema);
 
-items: [
-  {
-    product_id: mongoose.ObjectId
-  }, 
-  {
-    quantity: Number
-  }, 
-  {
-    title: { type: String,trim: true }
-  },  
-  {
-    category: { type: String,trim: true }
-  }
-]
+// items: [
+//   {
+//     product_id: mongoose.ObjectId
+//   }, 
+//   {
+//     quantity: Number
+//   }, 
+//   {
+//     title: { type: String,trim: true }
+//   },  
+//   {
+//     category: { type: String,trim: true }
+//   }
+// ]

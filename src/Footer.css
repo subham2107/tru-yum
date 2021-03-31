@@ -1,12 +1,12 @@
 body {
-  margin:0;
+  margin: 0;
   background-color: #f6f8fa;
   font-family: 'Work Sans', sans-serif;
   color:rgb(77, 80, 83);
 }
 
 .footer-inside{
-  background-color:#3f3d56;
+  background-color:#84c225;
 }
 
 .footer-info {
@@ -19,10 +19,12 @@ body {
 }
 
 .footer-wrapper {
-  min-height: 45px;
+  margin-top: 30px;
+  line-height: 10px;
 }
 
 .footer-logo {
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 

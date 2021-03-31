@@ -1,64 +1,3 @@
-// import React from 'react';
-// import ProductDetails from './ProductDetails';
-
-
-
-// class ProductList extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {};
-//   }
-
-//   componentDidMount() {
-//       fetch(`/api/products/categories/${this.props.match.params.cartegoryname}`)
-//         .then(response => response.json())
-//         .then(response => {
-//             //console.log(response)
-//             //console.log("aaaa");
-//             for(let i=0;i<(response).length;i++)
-//            {
-//                //console.log((response[i].title));
-//                const title = response[i].title;
-//                <ProductDetails title = {title} quantity={response[i].quantity} />
-//            }
-//             this.setState({category: response});
-//         });
-//     }
-    
-//     render() {
-
-//         // Category.find({}).then(category => {
-//         //     let categoryNames = category.map(function (cat) {
-//         //       return cat.name;
-//         //     });
-
-//         let categories= [];
-//     categories=(this.state.category);
-//         //console.log(this.state.category);
-//         console.log(`hellllllllllllo ${categories.title}`);
-//         // Category.find({}).then(category => {
-//         //          let categoryNames = categories.map(function (cat) {
-//         //            return cat.name;
-//         //         });
-
-//         return (
-            
-//             <div>
-//                Product data: {JSON.stringify(this.state.category)}
-//             </div>
-//         );
-    
-//     // render() {
-//     //     return (
-            
-//     //         <div>Product data: {JSON.stringify(this.state.category)}</div>
-//     //     );
-//     // }
-// }
-// }
-
-//export default ProductList;
-
 import React from 'react';
 import NavBar from './NavBar';
 import Banner from './Banner';
@@ -70,23 +9,43 @@ class ListingProduct extends React.Component {
         super(props);
     }
     render (){
-        return (<div class="main-content2">
-            <div class="cardd">
-  {/* <a href="https://my-encoder-decoder.netlify.app/base64encode" target="_blank"/> */}
-  <div class="img-wrapperr">
-  <img class="card-imgg" src="./images/{this.props.title}.jpg"/>
+//         return (<div class="main-content2">
+//             <div class="cardd">
+  
+//   <div class="img-wrapperr">
+//   <img class="card-imgg" src="/images/{this.props.title}.jpg"/>
+// </div>
+// </div>
+// <div>{this.props.title}</div>
+//  <div>{this.props.quantity}</div>
+// <div>{this.props.product_id}</div> 
+// <div>{parseFloat(this.props.price)}</div>
+// </div>);
+const src = this.props.title;
+const image = `/images/${src}.jpg`;
+// const {imggg} = "/images/groceryicon.jpeg";
+console.log(this.props.price);
+return (
+  <div  class="grid-item" style={{marginLeft:"50px"}}>   
+<img style ={{cursor: "pointer",marginTop:"20px",boxShadow: "0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)"}} 
+src = {image} height="200px" width="200px" 
+onClick={() => categoriesClick(this.props.product_id)}></img>
+<div style={{marginTop:"15px"}}>{this.props.title} </div> <div>Rs.{this.props.price} </div>
+<hr style={{maxWidth:"calc(100vw - 50px)"}}></hr>
 </div>
-</div>
-{/* <div>{this.props.title}</div>
- <div>{this.props.quantity}</div>
-<div>{this.props.product_id}</div>  */}
-<div>{this.props.description}</div>
 
-
-            </div>
-            );
+);
     }
     
+  }
+
+  const categoriesClick = (productid) => {
+    console.log('dsjvjvnvx');
+    console.log(`hi ${productid}`);
+    return (
+      window.location = `/products/${productid}`
+   );
+  
   }
 
 
@@ -110,21 +69,24 @@ class ProductList extends React.Component {
       this.setState({ products });
 
       console.log(this.state.products);
-      console.log(JSON.stringify(this.state.products));
+      
     }
+    
     render() {
         return (
             <div>
+              <div style={{minHeight: "calc(100vh - 25px)"}}>
                 <NavBar/>
               {(this.state.products).map((product) => (
                   <ListingProduct
                   title={product.title}
-                  description={product.description}
                   quantity={product.quantity}
                   product_id={product._id}
-                  price={product.price.mrp}
+                  price={(product.price.mrp)}
+                  //price: {mrp:parseFloat(product[0].price.mrp),list_price:parseFloat(product[0].price.mrp)} 
                   />
               ))}
+              </div>
               <Footer />
             </div>
         );
