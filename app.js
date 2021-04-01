@@ -29,8 +29,8 @@ db.connect({
         },
         store: new MongoStore({ client: db.getClient() }),
         secret: process.env.SESSION_SECRET,
-        resave: true,
-        saveUninitialized: false
+        resave: false,
+        saveUninitialized: true,
     }), api);
 
     //Handle non-api routes with static build folder

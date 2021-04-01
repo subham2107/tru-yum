@@ -8,6 +8,9 @@ import ProductList from './ProductList';
 import ProductDetails from './ProductDetails';
 import AddtoCart from './AddtoCart';
 import MyCart from './MyCart';
+import Shipping from './Shipping';
+import PlaceOrder from './PlaceOrder';
+import Order from './Order';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -23,6 +26,9 @@ function App() {
           <Route exact path="/products/:productid" component={ProductDetails} />
           <Route exact path="/cart/cartitems" component={MyCart} />
           <Route exact path="/cart/:productid" component = {AddtoCart} />
+          <Route exact path="/shipping" component = {Shipping} />
+          <Route exact path="/placeorder" component = {PlaceOrder} />
+          <Route exact path="/orders/:id" component = {Order} />
         </Switch>
     </Router>
   );

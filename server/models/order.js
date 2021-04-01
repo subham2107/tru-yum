@@ -15,19 +15,14 @@ const orderSchema = new Schema({
     user_id: mongoose.ObjectId,
     items: [
       {
-        product_id: mongoose.ObjectId
-      }, 
-      {
-        quantity: Number
-      }, 
-      {
-        title: { type: String,trim: true }
-      },  
-      {
-        category: { type: String,trim: true }
+        product_id: mongoose.ObjectId,
+        quantity: Number,
+        title: String,
+        category: String
       }
     ],
     amount: Number,
+    currency: String,
     status: String,
     
 });

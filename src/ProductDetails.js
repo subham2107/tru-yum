@@ -30,7 +30,7 @@ return (
     onClick={() => categoriesClick(this.props.product_id)} >Add to cart</button>
 </div>
 
-<div>{this.props.description}</div>
+<div>{this.props.description}{this.props.price}</div>
 </div>
 
 );
@@ -40,9 +40,9 @@ return (
 
   const categoriesClick = (productid) => {
     console.log('dsjvjvnvx');
-    console.log(`hi ${productid}`);
+    console.log(`abcvcds ${productid}`);
     return (
-
+      //alert('Added to cart')
       window.location = `/cart/${productid}`
    );
   
@@ -70,6 +70,7 @@ class ProductDetails extends React.Component {
       this.setState({ products });
 
       console.log(this.state.products.price.mrp);
+      console.log(this.state.products._id);
        
     }
     render() {
@@ -83,9 +84,9 @@ class ProductDetails extends React.Component {
                   quantity={this.state.products.quantity}
                   description={this.state.products.description}
                   product_id={this.state.products._id}
-                  // price ={this.state.products.price.mrp}
-                  // price={(this.state.products.price.mrp).replace(/\D/g,'')}
-                  // price={(JSON.stringify(product.price.mrp)).replace(/\D/g,'')}
+                  //price ={this.state.products.price.mrp}
+                  //price={(this.state.products.price.mrp).replace(/\D/g,'')}
+                   //price={(JSON.stringify(this.state.products.price.mrp)).replace(/\D/g,'')}
                   />
                   </div>
               <Footer />

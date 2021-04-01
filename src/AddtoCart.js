@@ -22,14 +22,14 @@ class  MyCarts extends React.Component {
       );
   }
 }
-const categoriesClick = (productid) => {
-    console.log('dsjvjvnvx');
-    console.log(`hi ${productid}`);
-    return (
-      window.location = `/cart/mycartnew`
-   );
+// const categoriesClick = (productid) => {
+//     console.log('dsjvjvnvx');
+//     console.log(`hi ${productid}`);
+//     return (
+//       window.location = `/cart/mycartnew`
+//    );
   
-  }
+//   }
 class AddtoCart extends React.Component {
     constructor(props) {
       super(props);
@@ -74,6 +74,7 @@ class AddtoCart extends React.Component {
             
               
         //  </div>
+
         window.location = `/cart/cartitems`
         );
     }

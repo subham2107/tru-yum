@@ -27,7 +27,8 @@
 
 }
 
-.cart-icon {
+.cart-icon,
+.user-icon {
   height: 25px;
   width: 25px;
   cursor: pointer;
@@ -86,7 +87,7 @@
   }
 
   .dropdown-content a:hover{
-    color:#84c225;
+    color:#000000;
     background-color: #e7e7e7; 
   }
   
