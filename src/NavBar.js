@@ -157,6 +157,7 @@ const cartClick = () => {
     <span style={{margin: "0 10px 0 10px"}}>/</span>
     <span class="signup">Signup</span> */}
     <img src="/images/user-login-icon.png" class="user-icon" onClick={onLoginClick} ></img>
+    
   </div>
   
 </header>

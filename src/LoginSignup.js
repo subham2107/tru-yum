@@ -51,16 +51,20 @@ class LoginSignup extends React.Component {
 
   render() {
     return (
-      <div className="LoginSignup">
+      <div className="LoginSignup" style={{height: "300px",width:"300px",border:"solid black",
+      display:"flex",justifyContent:"center",alignItems:"center"}}>
         <form>
+          <div>
           <input placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input>
           <input placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input>
+          </div>
           <div>
             <input type="submit" onClick={this.onLoginClick} value="Login"></input>
             <input type="submit" onClick={this.onSignupClick} value="Sign up"></input>
           </div>
         </form>
-      </div>
+        </div>
+      
     );
   }
 }
