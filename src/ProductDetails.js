@@ -24,13 +24,27 @@ const src = this.props.title;
 const image = `/images/${src}.jpg`;
 return (
   <div>
-  <div class="grid-item" onClick={() => categoriesClick(this.props.product_id)}>   
-<img style ={{cursor: "pointer",marginTop:"20px",boxShadow: "0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)"}} src = {image} height="300px" ></img>{this.props.price}   
-<button class="AddCartBtn"
-    onClick={() => categoriesClick(this.props.product_id)} >Add to cart</button>
+    <div class="prodDetailsgrid">
+  <div >   
+<img class= "detailsImg" style ={{marginTop:"40px",boxShadow: "0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)"}} src = {image} height="300px" width="517px" ></img>
 </div>
 
-<div>{this.props.description}{this.props.price}</div>
+<div class="priceDetails">
+<h1>{this.props.title}</h1><h2>({this.props.category})</h2>
+
+<h3><strike>Price Rs. {this.props.list_price} </strike></h3> 
+
+<h3>Price Rs. {this.props.price}</h3>
+<p>Expect delivery within 7 business days.</p>
+<button class="AddCartBtn"
+    onClick={() => categoriesClick(this.props.product_id)} >ADD TO CART</button>
+</div>
+</div>
+
+<div class= "prodDesc">
+<h3>Description</h3>
+<hr></hr>
+  {this.props.description}</div>
 </div>
 
 );
@@ -44,6 +58,7 @@ return (
     return (
       //alert('Added to cart')
       window.location = `/cart/${productid}`
+      
    );
   
   }
@@ -54,6 +69,7 @@ class ProductDetails extends React.Component {
       super(props);
       this.state = {
         products: [],
+        price: {}
       };
       this.getRandomProducts = this.getRandomProducts.bind(this);
     }
@@ -68,23 +84,28 @@ class ProductDetails extends React.Component {
       const products = await this.getRandomProducts();
       // console.log(`hi ${products}`);
       this.setState({ products });
+      this.setState({ price : products.price });
 
-      console.log(this.state.products.price.mrp);
-      console.log(this.state.products._id);
-       
+      //console.log(this.state.products.price.mrp);
+     // console.log(products.price.mrp);
+       //let myPrice=products.price.mrp;
     }
     render() {
+      console.log('hi');
+      console.log(this.state.products);
         return (
             <div>
               <div style={{minHeight: "calc(100vh - 31px)"}}>
                 <NavBar/>
-              
+                 
                   <ProductDetail
                   title={this.state.products.title}
+                  category={this.state.products.category}
                   quantity={this.state.products.quantity}
                   description={this.state.products.description}
                   product_id={this.state.products._id}
-                  //price ={this.state.products.price.mrp}
+                  price ={this.state.price.mrp}
+                  list_price ={this.state.price.list_price}
                   //price={(this.state.products.price.mrp).replace(/\D/g,'')}
                    //price={(JSON.stringify(this.state.products.price.mrp)).replace(/\D/g,'')}
                   />

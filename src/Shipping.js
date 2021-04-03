@@ -74,6 +74,8 @@ class Shipping extends React.Component {
 
         return (
             <div>
+              <div style={{minHeight: "calc(100vh - 31px)"}}>
+              <NavBar/>
               {/* <NavBar/>
                 {(this.state.items.map((eachitem) => (
                 <MyCarts
@@ -101,6 +103,8 @@ class Shipping extends React.Component {
                     
          </form>
          <button onClick={() => categoriesClick(this.props.id)}>Continue</button>
+         </div>
+         <Footer />
          </div>
         );
     }

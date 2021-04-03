@@ -67,5 +67,20 @@ console.log(`Error in finding cart ${err}`);
 });
 });
 
+router.delete('/:productId', (req, res) => {
+    Cart.findOne({_id : req.session.cartId}).then(cart => {
+        let balance = 0;
+        for (var i in cart.items) {
+            if(cart.items[i].product_id === req.params.productId){
+                balance = cart.items[i].productprice;
+                cart.items.splice(i, 1);
+            }
+        }
+        cart.totalprice = cart.totalprice - balance;
+        cart.save().then(() => {console.log("Deleted");
+        res.status(204).send({message : 'Product Deleted in D/B'});
+    });
+});
+});
 module.exports = router;
 

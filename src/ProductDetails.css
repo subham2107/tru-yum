@@ -1,11 +1,22 @@
 .AddCartBtn {
-    margin-left: 20px;
-    margin-bottom: 30px;
-    height: 40px;
-    color: #414042;
-    font: 17px ProximaNovaA-Regular;
-    display: inline-block;
-    line-height: 2;
     cursor: pointer;
+    background: #84c225;
+    color: #fff;
+    border: 1px solid #84c225;
+    border-radius: 3px;
+    padding: 11px 30px;
     
+}
+
+.prodDetailsgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    justify-items: center;
+    align-items: center;
+}
+
+.prodDesc{
+    line-height: 2;
+    margin: 75px;
+    text-align: justify;
 }

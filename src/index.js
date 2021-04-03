@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import HomePage from './HomePage';
 import LoginSignup from './LoginSignup';
+import SignUp from './SignUp';
 import Profile from './Profile';
 import ProductList from './ProductList';
 import ProductDetails from './ProductDetails';
@@ -10,7 +11,7 @@ import AddtoCart from './AddtoCart';
 import MyCart from './MyCart';
 import Shipping from './Shipping';
 import PlaceOrder from './PlaceOrder';
-import Order from './Order';
+import Orders from './Orders';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/login" component={LoginSignup} />
+          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/products/categories/:cartegoryname" component={ProductList } />
           <Route exact path="/products/:productid" component={ProductDetails} />
@@ -28,7 +30,7 @@ function App() {
           <Route exact path="/cart/:productid" component = {AddtoCart} />
           <Route exact path="/shipping" component = {Shipping} />
           <Route exact path="/placeorder" component = {PlaceOrder} />
-          <Route exact path="/orders/:id" component = {Order} />
+          <Route exact path="/orders/myorders" component = {Orders} />
         </Switch>
     </Router>
   );

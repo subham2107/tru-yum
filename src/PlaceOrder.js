@@ -69,18 +69,9 @@ class PlaceOrder extends React.Component {
       
         return (
             <div>
-              {/* <NavBar/>
-                {(this.state.items.map((eachitem) => (
-                <MyCarts
-                title = {eachitem.title}
-                product_id = {eachitem.product_id}
-                quantity = {eachitem.quantity}
-                />
-                
-                )))}
-                <Footer /> */}
-              
+               <NavBar/>
                 <button onClick={() => categoriesClick()}>Place Order</button>
+                <Footer />
          </div>
         );
     }

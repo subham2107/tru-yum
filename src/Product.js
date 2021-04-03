@@ -15,69 +15,70 @@ function Product (){
 
   return (
     <div>
-      <h1 style ={{textAlign: "center"}}>Check out our products here</h1>
+      <h1 style ={{textAlign: "center"}}>Most popular</h1>
       <main class="main-content">
 <div class="card">
-  <a href="https://my-encoder-decoder.netlify.app/base64encode" target="_blank">
+  <a href="/products/605a37864a2a8cb97b9fd67b">
   <div class="img-wrapper">
-  <img class="card-img" src="/images/potato.jpg"/>
+  <img class="card-img" src="/images/Potato.jpg"/>
 </div>
   <p>Potato</p></a>
-  <input type="button" id="button-minus" value="-"/>
+  {/* <input type="button" id="button-minus" value="-"/>
     <input type="text" id="input" value="0"/>
-    <input type="button" id="button-plus" value="+"/>
+    <input type="button" id="button-plus" value="+"/> */}
 </div>
 
 
 <div class="card" >
-  <a href="https://my-color-converter.netlify.app/rgb-hex" target="_blank">
+  <a href="/products/605a37864a2a8cb97b9fd67c" target="_blank">
   <div class="img-wrapper">
-  <img class="card-img" src="/images/onion.jpg"/>
+  <img class="card-img" src="/images/Onion.jpg"/>
   </div>
   <p>Onion</p> </a>
 </div>
 
 <div class="card" >
-  <a href="https://my-time-stamp-converter.netlify.app/epochtohuman" target="_blank">
+  <a href="/products/605a37864a2a8cb97b9fd67d" >
   <div class="img-wrapper">
-  <img class="card-img" src="/images/cabbage.jpg"/>
+  <img class="card-img" src="/images/Cabbage.jpg"/>
 </div>
   
   <p>Cabbage</p></a>
 </div>
 
 <div class="card">
-  <a href="https://my-number-base-converter.netlify.app/decimaltobinary" target="_blank">
+  <a href="/products/605a37864a2a8cb97b9fd67e">
   <div class="img-wrapper">
-  <img class="card-img" src="/images/cauliflower.jpg"/>
+  <img class="card-img" src="/images/Cauliflower.jpg"/>
 </div>
   <p>Cauliflower</p></a>
 </div>
 
 <div class="card" >
-  <a href="https://my-string-utilities.netlify.app/stringutilities" target="_blank">
+<a href="/products/605a38634a2a8cb97b9fd67f">
   <div class="img-wrapper">
-  <img class="card-img" src="/images/carrot.jpg"/>
+  <img class="card-img" src="/images/Carrot.jpg"/>
 </div>
 <p>Carrot</p></a>
 </div>
 
   
 <div class="card" >
-  <a href="https://my-unit-converter.netlify.app/temperature.html" target="_blank">
+<a href="/products/605a38634a2a8cb97b9fd680">
   <div class="img-wrapper">
-  <img class="card-img" src="/images/banana.jpg"/>
+  <img class="card-img" src="/images/Banana.jpg"/>
 </div>
   <p>Banana</p></a>
 </div>  
 
 <div class="card">
-  <a href="https://my-unit-converter.netlify.app/temperature.html" target="_blank">
+  <a href="/products/605a38634a2a8cb97b9fd681" >
   <div class="img-wrapper">
-  <img class="card-img" src="/images/apple.jpg"/>
+  <img class="card-img" src="/images/Apple.jpg"/>
 </div>
   <p>Apple</p></a>
 </div> 
+
 
   </main>
 

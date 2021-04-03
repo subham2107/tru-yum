@@ -7,8 +7,8 @@ const userSchema = new Schema({
         required: true,
         unique: true
     },
-    firstName: String,
-    lastName: String,
+    firstname: String,
+    lastname: String,
     createdAt: {
         type: Date,
         default: Date.now()

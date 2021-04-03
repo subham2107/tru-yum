@@ -5,13 +5,26 @@ const UserCredential = require('../models/user-credential');
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 
+router.get('/name', (req,res) => {
+    console.log(req.session.userId);
+    User.findOne({_id : req.session.userId}).then(user => {
+        if(user){
+            console.log("Inside get name");
+            console.log(user);
+        res.status(200).send({firstname : user.firstname});
+        }
+        else
+        res.staus(404).send({message : "No name provided"})
+    })
+});
+
 router.post('/', (req, res) => {
     if (!req.body) {
         res.status(400).send({error: "Email and Password not present in request"});
         return;
     }
 
-    const { email, password } = req.body;
+    const { firstname, lastname, email, password } = req.body;
 
     if (!email) {
         res.status(400).send({error: "Email not present in request"});
@@ -34,7 +47,7 @@ router.post('/', (req, res) => {
         const userCredential = new UserCredential({ email, password: hash });
 
         userCredential.save().then(() => {
-            const user = new User({ _id: userCredential.id, email });
+            const user = new User({ firstname, lastname, _id: userCredential.id, email, });
             user.save().then(() => {
                 res.status(201).send({ id: userCredential.id });
             });

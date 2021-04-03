@@ -6,10 +6,11 @@
   display: flex;
 }
 
-.companyLogo a {
+.companyLogo  {
   color:rgb(77, 80, 83);
   text-decoration: none;
   font-size: 40px;
+  cursor: pointer;
 }
 
 .logoY {
@@ -69,7 +70,7 @@
 
 }
 
-  .dropdown-content a {
+  .dropdown-content span {
     display: block;
     text-decoration: none;
     min-width: 180px;
@@ -86,7 +87,7 @@
     display: none;
   }
 
-  .dropdown-content a:hover{
+  .dropdown-content span:hover{
     color:#000000;
     background-color: #e7e7e7; 
   }

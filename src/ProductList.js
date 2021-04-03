@@ -23,15 +23,32 @@ class ListingProduct extends React.Component {
 // </div>);
 const src = this.props.title;
 const image = `/images/${src}.jpg`;
-// const {imggg} = "/images/groceryicon.jpeg";
 console.log(this.props.price);
+
+
 return (
-  <div  class="grid-item" style={{marginLeft:"50px"}}>   
-<img style ={{cursor: "pointer",marginTop:"20px",boxShadow: "0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)"}} 
-src = {image} height="200px" width="200px" 
-onClick={() => categoriesClick(this.props.product_id)}></img>
-<div style={{marginTop:"15px"}}>{this.props.title} </div> <div>Rs.{this.props.price} </div>
-<hr style={{maxWidth:"calc(100vw - 50px)"}}></hr>
+//   <div  class="productListContent">
+//   <div class="productListCard"  style={{marginLeft:"50px"}}>
+//   <div>
+//   <div>    
+// <img style ={{cursor: "pointer",marginTop:"20px",boxShadow: "0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)"}} 
+// src = {image} height="200px" width="200px" 
+// onClick={() => categoriesClick(this.props.product_id)}></img>
+// </div>
+// <div style={{marginTop:"15px"}}>{this.props.title} Rs.{this.props.price} </div>
+// </div>
+
+// {/* <hr style={{maxWidth:"calc(100vw - 50px)"}}></hr> */}
+// </div>
+// </div>
+
+
+<div class="grid-container" onClick={() => categoriesClick(this.props.product_id)}>   
+<div class = "grid-item">
+<img src = {image}  alt="NotAvailable" height="200px" width = "200px"></img><h4>{this.props.title}</h4> 
+<h4><strike>Price : Rs. {this.props.list_price}</strike> </h4>
+<h4>Price : Rs. {this.props.price} </h4>
+</div>
 </div>
 
 );
@@ -83,6 +100,7 @@ class ProductList extends React.Component {
                   quantity={product.quantity}
                   product_id={product._id}
                   price={(product.price.mrp)}
+                  list_price ={product.price.list_price}
                   //price: {mrp:parseFloat(product[0].price.mrp),list_price:parseFloat(product[0].price.mrp)} 
                   />
               ))}

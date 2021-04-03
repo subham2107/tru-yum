@@ -10,7 +10,7 @@ function initiatePayment(paymentHandlers, onOrderCreateFailure) {
           currency: res.currency,
           order_id: res.rzpOrderId,
           name: 'TruYum',
-          image: 'https://workat.tech/images/At-144x144.png',
+          image: 'https://img.flaticon.com/icons/png/512/45/45552.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF',
           description: 'E-commerce',
           theme: {
               color: '#84c225',

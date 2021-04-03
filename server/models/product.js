@@ -6,16 +6,9 @@ const productSchema = new Schema({
     description: { type: String,trim: true },
     category: { type: String,trim: true },
     quantity: { type: Number,default: 100},
-    price: {
-       mrp: {
-        type: Number,
-        default: 0
-      },
-
-      list_price: {
-        type: Number,
-        default: 0
-      }       
+    price : {
+        mrp : Number,
+        list_price : Number
     },
     createdAt: {
       type: Date,
@@ -29,3 +22,10 @@ const productSchema = new Schema({
 });
 
 module.exports = mongoose.model('Product', productSchema);
+
+
+
+
+
+
+
