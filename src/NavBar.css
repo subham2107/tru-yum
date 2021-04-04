@@ -6,10 +6,14 @@
   display: flex;
 }
 
+.SearchBar{
+  display: none;
+}
+
 .companyLogo  {
   color:rgb(77, 80, 83);
   text-decoration: none;
-  font-size: 40px;
+  font-size: 30px;
   cursor: pointer;
 }
 

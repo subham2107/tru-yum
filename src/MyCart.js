@@ -9,34 +9,8 @@ class  MyCarts extends React.Component {
   }
   render (){
 
-//     <div>
-//     <div class="prodDetailsgrid">
-//   <div >   
-// <img class= "detailsImg" style ={{marginTop:"40px",boxShadow: "0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)"}} src = {image} height="300px" width="517px" ></img>
-// </div>
-
-// <div class="priceDetails">
-// <h1>{this.props.title}</h1><h2>({this.props.category})</h2>
-
-// <h3><strike>Price Rs. {this.props.price} </strike></h3> 
-
-// <h3>Price Rs. {this.props.list_price}</h3>
-// <p>Expect delivery within 7 business days.</p>
-// <button class="AddCartBtn"
-//     onClick={() => categoriesClick(this.props.product_id)} >ADD TO CART</button>
-// </div>
-// </div>
-
-// <div class= "prodDesc">
-// <h3>Description</h3>
-// <hr></hr>
-//   {this.props.description}</div>
-// </div>
-
-
-      console.log("hhhh")
       const src = this.props.title;
-      console.log("llll")
+      
       //console.log(this.props.id);
       const image = `/images/${src}.jpg`;
       return (
@@ -81,7 +55,8 @@ class MyCart extends React.Component {
   
       this.state = {
         items: [],
-        price : {}
+        price : {},
+        info: {}
       };
   
       this.getRandomUsers = this.getRandomUsers.bind(this);
@@ -103,17 +78,19 @@ class MyCart extends React.Component {
       console.log(cart)
       this.setState({ items : cart.items });
       this.setState({price : cart});
-      // console.log(this.state.title);
-      //this.setState({ title : cart.items.title });
+      if(this.state.items){
+        this.setState({info: "A"});
     }
+  }
 
    
     render() {
       //console.log("ggggg")
-      let arr = [];
+      
       //console.log(arr);
       //console.log(this.state.items.title)
       
+      if(this.state.items){
 
         return (
             <div>
@@ -135,6 +112,21 @@ class MyCart extends React.Component {
               
          </div>
         );
+      }
+      else{
+        return (
+        <div>
+        <div style={{minHeight: "calc(100vh - 31px)"}}>
+              <NavBar/>
+              <div style={{fontSize: "20px",margin:"20px",display:"flex",justifyContent:"center",paddingTop: "40vh"}}>
+                There are no items in your cart !!!!
+                </div>
+                </div>
+                <Footer />
+                </div>
+      
+      );
+        }
     }
   }
   export default MyCart;

@@ -26,7 +26,7 @@ return (
   <div>
     <div class="prodDetailsgrid">
   <div >   
-<img class= "detailsImg" style ={{marginTop:"40px",boxShadow: "0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)"}} src = {image} height="300px" width="517px" ></img>
+<img class= "detailsImg" src={image} />
 </div>
 
 <div class="priceDetails">

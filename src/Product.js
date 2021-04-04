@@ -30,7 +30,7 @@ function Product (){
 
 
 <div class="card" >
-  <a href="/products/605a37864a2a8cb97b9fd67c" target="_blank">
+  <a href="/products/605a37864a2a8cb97b9fd67c">
   <div class="img-wrapper">
   <img class="card-img" src="/images/Onion.jpg"/>
   </div>

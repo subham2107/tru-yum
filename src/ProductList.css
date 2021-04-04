@@ -29,10 +29,10 @@
 } */
 
 .grid-container {
-  margin-top: 20px;
   display: inline-block;
   background-color: #fff;
-  margin: 30px 30px 30px 30px;
+  margin: 50px;
+  
   }
 
   
@@ -41,15 +41,16 @@
     background-color: #fff;
     color: #333;
     border-radius: 4px;
-    overflow: hidden;
-    position: relative;
     width: 100%;
-    padding: 1%;
     text-align: center;
-    justify-content: space-around;
+    
   }
 
   .grid-container :hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23);
 
+  }
+
+  .grid-item :hover {
+    box-shadow:none;
   }

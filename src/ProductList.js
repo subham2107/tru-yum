@@ -9,47 +9,30 @@ class ListingProduct extends React.Component {
         super(props);
     }
     render (){
-//         return (<div class="main-content2">
-//             <div class="cardd">
-  
-//   <div class="img-wrapperr">
-//   <img class="card-imgg" src="/images/{this.props.title}.jpg"/>
-// </div>
-// </div>
-// <div>{this.props.title}</div>
-//  <div>{this.props.quantity}</div>
-// <div>{this.props.product_id}</div> 
-// <div>{parseFloat(this.props.price)}</div>
-// </div>);
+
 const src = this.props.title;
 const image = `/images/${src}.jpg`;
 console.log(this.props.price);
 
 
 return (
-//   <div  class="productListContent">
-//   <div class="productListCard"  style={{marginLeft:"50px"}}>
-//   <div>
-//   <div>    
-// <img style ={{cursor: "pointer",marginTop:"20px",boxShadow: "0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)"}} 
-// src = {image} height="200px" width="200px" 
-// onClick={() => categoriesClick(this.props.product_id)}></img>
-// </div>
-// <div style={{marginTop:"15px"}}>{this.props.title} Rs.{this.props.price} </div>
-// </div>
 
-// {/* <hr style={{maxWidth:"calc(100vw - 50px)"}}></hr> */}
-// </div>
-// </div>
 
 
 <div class="grid-container" onClick={() => categoriesClick(this.props.product_id)}>   
 <div class = "grid-item">
-<img src = {image}  alt="NotAvailable" height="200px" width = "200px"></img><h4>{this.props.title}</h4> 
+  <div>
+  <div>
+<img src = {image}  alt="NotAvailable" height="200px" width = "200px"/>
+</div>
+<h4>{this.props.title}</h4> 
 <h4><strike>Price : Rs. {this.props.list_price}</strike> </h4>
 <h4>Price : Rs. {this.props.price} </h4>
 </div>
 </div>
+</div>
+
+
 
 );
     }

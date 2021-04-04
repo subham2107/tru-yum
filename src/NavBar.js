@@ -10,8 +10,38 @@ function SearchBar(){
     <div className="SearchIconWrapper"><img className="SearchIcon" src='/images/search-24px.svg' alt='searchIcon'/></div>
     </div>);
 }
-function NavBar(){
-  
+class NavBar extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+    cartcount: '',
+  };
+
+  this.getRandomUsers = this.getRandomUsers.bind(this);
+}
+
+async getRandomUsers() {
+    
+  const res = await fetch(`/api/cart/getcount`);
+  const data = await res.json();
+  if(data)
+  return data.itemcount;
+  else{
+    return;
+  }
+}
+async componentDidMount() {
+  const cartcount = await this.getRandomUsers();
+
+  if(cartcount){
+  this.setState({ cartcount });
+  }
+  else{
+    this.setState({cartcount : 0})
+  }
+}
+render() {
+
   const categoriesClick = (category) => {
     console.log('dsjvjvnvx');
     console.log(`hi ${category}`);
@@ -90,16 +120,16 @@ else{
         <div class="dropdown-content">
           <span class = "box" onClick={loginclick}>{temp}</span>
           <span class = "box" onClick = {orderclick}>My orders</span>
-          <span class = "box">Contact us</span>
           <span class = "box" onClick={logoutclick}>{logout}</span>
           </div>
       </div>
-  <div class="companyLogo" onClick={() => logoClick()}>Tru<span class="logoY">Y</span>um</div>
+  <div class="companyLogo" onClick={logoClick}>Tru<span class="logoY">Y</span>um</div>
   <SearchBar/>
 
   
 
-  <div><img class="cart-icon" onClick={() => cartClick()} src="/images/shopping_cart.png"/></div>
+  <div><img class="cart-icon" onClick={cartClick} src="/images/shopping_cart.png"/>
+  <span class="cartCount">({this.state.cartcount})</span></div>
   <div>
     {/* <span class="login" onClick={onLoginClick}>Login</span>
     <span style={{margin: "0 10px 0 10px"}}>/</span>
@@ -110,7 +140,10 @@ else{
   
 </header>
     );
+  }
 }
+
+
 
 export default NavBar;
 

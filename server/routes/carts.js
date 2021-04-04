@@ -4,6 +4,23 @@ const Product = require('../models/product');
 const Cart = require('../models/cart');
 //const {ObjectId} = require('mongodb');
 
+router.get('/getcount',(req,res) => {
+    Cart.find({_id : req.session.cartId}).then(cart => {
+        if(cart){
+            console.log(cart)
+            if(cart.length !== 0)
+            res.send({itemcount:cart[0].items.length});
+            else
+            res.send({itemcount:0})
+        }
+        else{
+            console.log("Inside else part of getcount")
+            res.send({itemcount:0})
+        }
+
+    })
+})
+
 router.get('/cartitems', (req, res) => {
   console.log("JJJJJJj")
   Cart.findOne({ _id: req.session.cartId }).then(user => {

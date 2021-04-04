@@ -18,7 +18,7 @@ const rzpInstance = new Razorpay({
 });
 
 router.get('/myorders', (req,res) => {
-    console.log("OOOOOOOO");
+    
     Order.find({user_id : req.session.userId}).then(
         order => {
             console.log(order)
