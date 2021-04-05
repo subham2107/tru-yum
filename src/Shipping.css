@@ -1,5 +1,4 @@
-.loginBtn
-{
+.shippingformBtn {
   background-color: #276ef1;
   color: #fff;
   font-size: 16px;
@@ -9,29 +8,14 @@
   cursor: pointer;
   border: none;
   font-family: inherit;
-  min-width: 80px;
-  max-width: 80px;
-  margin: 40px;
-}
-
-.signupBtn {
-  background-color: #276ef1;
-  color: #fff;
-  font-size: 16px;
-  line-height: 1.4;
-  padding: 10px;
-  border-radius: 3px;
-  cursor: pointer;
-  border: none;
-  font-family: inherit;
-  min-width: 80px;
-  max-width: 80px;
-  margin-left: 60px;
+  min-width: 90px;
+  max-width: 90px;
+  margin-left: 130px;
 }
 
 
 
-.login_div {
+.shipping_div {
   position: absolute;
 
   width: 300px;
@@ -41,24 +25,37 @@
   top: 50%;
   left: 50%;
   margin-top: -150px;
-  margin-left: -175px;
+  margin-left: -177px;
 }
 
-.login_form {
+.shipping_form {
   width: 350px;
-  height: 300px;
+  height: 350px;
+
   background: #fff;
   border-radius: 5px;
   border: solid 1px;
   
 }
 
-.loginEmail {
+.shippingCity {
   margin: 30px;
-  padding-left: 30px;
+  padding-left: 7px;
   
 }
 
-.loginPass {
+.shippingPC {
   margin: 30px;
+  padding-left: 7px;
+  
+}
+
+.shippingState {
+  margin: 30px;
+  padding-left: 7px;
+}
+
+.shippingCountry {
+  margin: 30px;
+  padding-left: 5px;
 }

@@ -61,12 +61,13 @@ class AddtoCart extends React.Component {
     console.log("Helllo");
       const cart = await this.getRandomUsers();
       this.setState({ cart });
+      window.location = `/products/${this.props.match.params.productid}`
     }
 
    
     render() {
         return (
-        window.location = `/products/${this.props.match.params.productid}`
+        <div className="abc">Loading...............</div>
         );
     }
   }

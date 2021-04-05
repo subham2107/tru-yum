@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import './Shipping.css';
 
 // class  MyCarts extends React.Component {
 //   constructor(props) {
@@ -73,39 +74,59 @@ class Shipping extends React.Component {
       }
 
         return (
-            <div>
-              <div style={{minHeight: "calc(100vh - 31px)"}}>
-              <NavBar/>
-              {/* <NavBar/>
-                {(this.state.items.map((eachitem) => (
-                <MyCarts
-                title = {eachitem.title}
-                product_id = {eachitem.product_id}
-                quantity = {eachitem.quantity}
-                />
+        //     <div>
+        //       <div style={{minHeight: "calc(100vh - 31px)"}}>
+        //       <NavBar/>
+        //       {/* <NavBar/>
+        //         {(this.state.items.map((eachitem) => (
+        //         <MyCarts
+        //         title = {eachitem.title}
+        //         product_id = {eachitem.product_id}
+        //         quantity = {eachitem.quantity}
+        //         />
                 
-                )))}
-                <Footer /> */}
-              <form class="">
-                <div class="form-group">
-                  <label class="form-label" for="address">Address</label>
-                  <input placeholder="Enter address" required="" type="text" id="address" class="form-control" />
-                </div>
-                    <div class="form-group"><label class="form-label" for="city">City</label>
-                      <input placeholder="Enter city" required="" type="text" id="city" class="form-control" />
-                    </div>
-                    <div class="form-group"><label class="form-label" for="postalCode">Postal Code</label>
-                      <input placeholder="Enter postal code" required="" type="text" id="postalCode" class="form-control" />
-                    </div>
-                    <div class="form-group"><label class="form-label" for="country">Country</label>
-                      <input placeholder="Enter country" required="" type="text" id="country" class="form-control" />
-                    </div>
+        //         )))}
+        //         <Footer /> */}
+        //       <form class="">
+        //         <div class="form-group">
+        //           <label class="form-label" for="address">Address</label>
+        //           <input placeholder="Enter address" required="" type="text" id="address" class="form-control" />
+        //         </div>
+        //             <div class="form-group"><label class="form-label" for="city">City</label>
+        //               <input placeholder="Enter city" required="" type="text" id="city" class="form-control" />
+        //             </div>
+        //             <div class="form-group"><label class="form-label" for="postalCode">Postal Code</label>
+        //               <input placeholder="Enter postal code" required="" type="text" id="postalCode" class="form-control" />
+        //             </div>
+        //             <div class="form-group"><label class="form-label" for="country">Country</label>
+        //               <input placeholder="Enter country" required="" type="text" id="country" class="form-control" />
+        //             </div>
                     
-         </form>
-         <button onClick={() => categoriesClick(this.props.id)}>Continue</button>
-         </div>
-         <Footer />
-         </div>
+        //  </form>
+        //  <button onClick={() => categoriesClick(this.props.id)}>Continue</button>
+        //  </div>
+        //  <Footer />
+        //  </div>
+
+<div>
+<div style={{minHeight: "calc(100vh - 31px)"}}>
+<NavBar/>
+<div class="shipping_div">
+<form class="shipping_form">
+  
+  <div class="shippingCity">City: <input  placeholder="City"  required type="text" ></input></div>
+  <div class="shippingPC">Postal Code: <input  placeholder="Postal Code"  required type="text" ></input></div>
+  <div class="shippingState">State: <input  placeholder="State"  required type="text"  ></input></div>
+  <div class="shippingCountry">Country: <input  placeholder="Country" required type="text" ></input></div>
+  
+  <div>
+  <button className="shippingformBtn" onClick={() => categoriesClick(this.props.id)}>Continue</button>
+  </div>
+</form>
+</div>
+</div>
+<Footer/>
+</div>
         );
     }
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './Footer';
 import NavBar from './NavBar';
+import './Orders.css';
 
 class Order extends React.Component {
   constructor(props) {
@@ -9,44 +10,36 @@ class Order extends React.Component {
 
   
   render (){
+
+    
+   
     const src = this.props.title;
     const image = `/images/${src}.jpg`;
 
     let amt= this.props.amount;
     amt/=100;
-    
+
+    //let myDate = new Date(this.props.createdDate);
+    //alert(myDate);
+   // console.log(myDate);
       return (
-        <div class="grid-container33">   
-                <div class = "grid-items3">
-      <img src = {image} height="100" alt="NotAvailable" height="200px" width = "150px"></img>
-      </div>
-      <div class = "grid-items3">
-      <div class="grid-container44">   
-      <div class = "grid-items4">
-        
-        <div>
-          <strong>{this.props.title}</strong>
-        </div>
-        <br>
-        </br>
-  
-  
-      <span>Quantity: {this.props.quantity}</span>
-      <div class = "test">
-  <span>
-    </span>
-    </div>
-      </div>
-      <div class = "grid-items5">
-          <div><strong>Order placed on : {this.props.createdDate}</strong></div>
-           <strong>Price : Rs. {this.props.productprice}</strong> 
-        </div>
-      </div>
-  
-  
-    </div>
-  </div>
       
+
+      <div class="mycartItems">   
+
+<div class="cartcontainer"><img class= "cartImg" src = {image} ></img></div>
+<div class="cartDetails"><h3>{this.props.title}</h3> <h4>Rs. {this.props.productprice}</h4><h4>Quantity: {this.props.quantity}</h4>
+<h4>Order Date: {this.props.createdDate}</h4>
+
+{/* <div class="_3dY_ZR"><button class="_23FHuj" disabled=""> – </button><div class="_26HdzL"><input type="text" value="1" class="_253qQJ"/></div><button class="_23FHuj"> + </button></div>
+ */}
+ </div>
+<div>
+  <p class="delP">Delivery in 7 days | Free</p>
+</div>
+
+</div>
+
       );
   }
 }
