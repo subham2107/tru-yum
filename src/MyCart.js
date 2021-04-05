@@ -8,6 +8,16 @@ class  MyCarts extends React.Component {
       super(props);
   }
   render (){
+    
+  //   const input=document.querySelector('#input');
+  // const buttonMinus = document.querySelector('#button-minus');
+  // buttonMinus.addEventListener('click', event => {
+  //             input.value--;
+  // });
+  // const buttonPlus = document.querySelector('#button-plus');
+  // buttonPlus.addEventListener('click', event => {
+  //             input.value++;
+  // });
 
       const src = this.props.title;
       
@@ -19,6 +29,7 @@ class  MyCarts extends React.Component {
   <div class="cartcontainer"><img class= "cartImg" src = {image} ></img></div>
   <div class="cartDetails"><h3>{this.props.title}</h3> <h4>Rs. {this.props.price}</h4><h4>Quantity: {this.props.quantity}</h4>
   <button class="removeBtn" onClick={() => onRemoveClick(this.props.product_id)}>REMOVE</button>
+  <div class="_3dY_ZR"><button class="_23FHuj" disabled=""> – </button><div class="_26HdzL"><input type="text" value="1" class="_253qQJ"/></div><button class="_23FHuj"> + </button></div>
   </div>
   <div>
     <p class="delP">Delivery in 7 days | Free</p>

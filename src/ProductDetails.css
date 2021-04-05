@@ -32,7 +32,7 @@
 @media screen and (max-width: 1110px) {
     .detailsImg {
         
-        width: 400px;
+        width: 300px;
     }
   }
  
@@ -44,9 +44,3 @@
     }
   }
 
-  @media screen and (max-width: 1110px) {
-    .detailsImg {
-        
-        width: 300px;
-    }
-  }

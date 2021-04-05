@@ -23,9 +23,7 @@ function Product (){
   <img class="card-img" src="/images/Potato.jpg"/>
 </div>
   <p>Potato</p></a>
-  {/* <input type="button" id="button-minus" value="-"/>
-    <input type="text" id="input" value="0"/>
-    <input type="button" id="button-plus" value="+"/> */}
+  
 </div>
 
 
