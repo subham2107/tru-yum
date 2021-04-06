@@ -37,7 +37,7 @@ class AddtoCart extends React.Component {
    
     render() {
         return (
-        <div className="abc">Loading...............</div>
+        <div ></div>
         );
     }
   }
