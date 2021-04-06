@@ -94,6 +94,7 @@ router.put('/:id', auth.authenticate, (req, res) => {
         Order.updateOne({ _id: orderId }, { $set: { status: 'COMPLETED', razorpay_payment_id, razorpay_order_id, razorpay_signature }}).then(() => {
             res.status(204).send();
         });
+        delete req.session.cartId;
     } else {
         res.status(400).send({ error: 'Signature validation failed' });
         return;
