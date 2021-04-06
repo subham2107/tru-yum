@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
 function SearchBar(){
-  return (<div class="SearchBar">
+  return (<div className="SearchBar">
     <input className="SearchInput" type="text" placeholder="Search for products..."></input>
     <div className="SearchIconWrapper"><img className="SearchIcon" src='/images/search-24px.svg' alt='searchIcon'/></div>
     </div>);
@@ -102,31 +102,31 @@ else{
 
   return (
     
-      <header class="navbar">
+      <header className="navbar">
         
-      <div class="dropdown-nav">Categories <span><img class="dropdown-arrow" src="/images/down-arrow.svg"/></span>
+      <div className="dropdown-nav">Categories <span><img className="dropdown-arrow" src="/images/down-arrow.svg"/></span>
   
-  <div class="dropdown-content">
+  <div className="dropdown-content">
   <span onClick={() => categoriesClick('Fruits and vegetables')}>Fruits and vegetables</span>
   <span onClick={() => categoriesClick('Fish/Meat/Eggs')}>Fish/Meat/Eggs</span>
   <span onClick={() => categoriesClick('Cooked food')}>Cooked food</span>
  
   </div>
   </div>
-  <div class="dropdown-nav" ><img class="user-icon" src= "/images/user-login-icon.png"/>
-        <div class="dropdown-content">
-          <span class = "box" onClick={loginclick}>{temp}</span>
-          <span class = "box" onClick = {orderclick}>My orders</span>
-          <span class = "box" onClick={logoutclick}>{logout}</span>
+  <div className="dropdown-nav" ><img className="user-icon" src= "/images/user-login-icon.png"/>
+        <div className="dropdown-content">
+          <span className = "box" onClick={loginclick}>{temp}</span>
+          <span className = "box" onClick = {orderclick}>My orders</span>
+          <span className = "box" onClick={logoutclick}>{logout}</span>
           </div>
       </div>
-  <div class="companyLogo" onClick={logoClick}>Tru<span class="logoY">Y</span>um</div>
+  <div className="companyLogo" onClick={logoClick}>Tru<span className="logoY">Y</span>um</div>
   <SearchBar/>
 
   
 
-  <div><img class="cart-icon" onClick={cartClick} src="/images/shopping_cart.png"/>
-  <span class="cartCount">({this.state.cartcount})</span></div>
+  <div><img className="cart-icon" onClick={cartClick} src="/images/shopping_cart.png"/>
+  <span className="cartCount">({this.state.cartcount})</span></div>
   
 </header>
     );

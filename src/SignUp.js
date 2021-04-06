@@ -39,16 +39,16 @@ class SignUp extends React.Component {
       <div>
         <div style={{minHeight: "calc(100vh - 31px)"}}>
         <NavBar/>
-      <div class="signup_div">
-        <form class="signup_form">
+      <div className="signup_div">
+        <form className="signup_form">
           
-          <div class="signupFname" >First Name: <input  placeholder="first name" name="firstname" required type="text" onInput={this.onInput} value={this.state.firstname}></input></div>
-          <div class="signupLname">Last Name: <input  placeholder="last name" name="lastname" required type="text" onInput={this.onInput} value={this.state.lastname}></input></div>
-          <div class="signupEmail">Email: <input  placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input></div>
-          <div class="signupPass">Password: <input  placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input></div>
+          <div className="signupFname" >First Name: <input  placeholder="first name" name="firstname" required type="text" onInput={this.onInput} value={this.state.firstname}></input></div>
+          <div className="signupLname">Last Name: <input  placeholder="last name" name="lastname" required type="text" onInput={this.onInput} value={this.state.lastname}></input></div>
+          <div className="signupEmail">Email: <input  placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input></div>
+          <div className="signupPass">Password: <input  placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input></div>
           
           <div>
-            <input class= "signupformBtn" type="submit" onClick={this.onSignupClick} value="Sign up"></input>
+            <input className= "signupformBtn" type="submit" onClick={this.onSignupClick} value="Sign up"></input>
           </div>
         </form>
         </div>

@@ -59,18 +59,18 @@ class LoginSignup extends React.Component {
        <div>
          <div style={{minHeight: "calc(100vh - 31px)"}}>
         <NavBar/>
-        <div class="login_div">
-        <form class="login_form">
+        <div className="login_div">
+        <form className="login_form">
           
-          <div class="loginEmail">Email: <input placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input></div>
+          <div className="loginEmail">Email: <input placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input></div>
           
           
-          <div class="loginPass">Password: <input placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input></div>
+          <div className="loginPass">Password: <input placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input></div>
           
           <div>
-            <input class= "loginBtn" type="submit" onClick={this.onLoginClick} value="Login"></input>
+            <input className= "loginBtn" type="submit" onClick={this.onLoginClick} value="Login"></input>
           
-            <input class= "signupBtn" type="submit" onClick={this.onSignupClick} value="SignUp"></input>
+            <input className= "signupBtn" type="submit" onClick={this.onSignupClick} value="SignUp"></input>
           </div>
         </form>
         </div>

@@ -20,13 +20,13 @@ class Shipping extends React.Component {
 <div>
 <div style={{minHeight: "calc(100vh - 31px)"}}>
 <NavBar/>
-<div class="shipping_div">
-<form class="shipping_form">
+<div className="shipping_div">
+<form className="shipping_form">
   
-  <div class="shippingCity">City: <input  className="cityInput" placeholder="City"   type="text" ></input></div>
-  <div class="shippingPC">Postal Code: <input  className="pcInput" placeholder="Postal Code"   type="text" ></input></div>
-  <div class="shippingState">State: <input  className="stateInput" placeholder="State"   type="text"  ></input></div>
-  <div class="shippingCountry">Country: <input className="countryInput"  placeholder="Country"  type="text" ></input></div>
+  <div className="shippingCity">City: <input  className="cityInput" placeholder="City"   type="text" ></input></div>
+  <div className="shippingPC">Postal Code: <input  className="pcInput" placeholder="Postal Code"   type="text" ></input></div>
+  <div className="shippingState">State: <input  className="stateInput" placeholder="State"   type="text"  ></input></div>
+  <div className="shippingCountry">Country: <input className="countryInput"  placeholder="Country"  type="text" ></input></div>
 </form>
 
 <div>

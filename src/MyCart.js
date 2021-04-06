@@ -13,14 +13,14 @@ class  MyCarts extends React.Component {
       const src = this.props.title;
       const image = `/images/${src}.jpg`;
       return (
-          <div class="mycartItems">   
+          <div className="mycartItems">   
 
-  <div class="cartcontainer"><img class= "cartImg" src = {image} ></img></div>
-  <div class="cartDetails"><h3>{this.props.title}</h3> <h4>Rs. {this.props.price}</h4><h4>Quantity: {this.props.quantity}</h4>
-  <button class="removeBtn" onClick={() => onRemoveClick(this.props.product_id)}>REMOVE</button>
+  <div className="cartcontainer"><img className= "cartImg" src = {image} ></img></div>
+  <div className="cartDetails"><h3>{this.props.title}</h3> <h4>Rs. {this.props.price}</h4><h4>Quantity: {this.props.quantity}</h4>
+  <button className="removeBtn" onClick={() => onRemoveClick(this.props.product_id)}>REMOVE</button>
    </div>
   <div>
-    <p class="delP">Delivery in 7 days | Free</p>
+    <p className="delP">Delivery in 7 days | Free</p>
   </div>
   
 </div>
@@ -99,8 +99,8 @@ class MyCart extends React.Component {
                 />
                 
                 )))}
-                <div class="totalCheckout"><h1>Total Amount = Rs. {this.state.price.totalprice}</h1>
-                <button class="proceedToCheckoutBtn" onClick={() => categoriesClick(this.props.id)}>PROCEED TO CHECKOUT</button></div>
+                <div className="totalCheckout"><h1>Total Amount = Rs. {this.state.price.totalprice}</h1>
+                <button className="proceedToCheckoutBtn" onClick={() => categoriesClick(this.props.id)}>PROCEED TO CHECKOUT</button></div>
                 </div>
                 <Footer />
               

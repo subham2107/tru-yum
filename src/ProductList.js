@@ -19,8 +19,8 @@ return (
 
 
 
-<div class="grid-container" onClick={() => proListItemClick(this.props.product_id)}>   
-<div class = "grid-item">
+<div className="grid-container" onClick={() => proListItemClick(this.props.product_id)}>   
+<div className = "grid-item">
   <div>
   <div>
 <img src = {image}  alt="NotAvailable" height="200px" width = "200px"/>

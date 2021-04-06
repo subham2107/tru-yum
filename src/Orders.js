@@ -19,10 +19,10 @@ class Order extends React.Component {
     amt/=100;
 
       return (
-      <div class="mycartItems">   
+      <div className="mycartItems">   
 
-<div class="cartcontainer"><img class= "cartImg" src = {image} ></img></div>
-<div class="cartDetails"><h3>Name: {this.props.title}</h3> <h4>Price: Rs. {this.props.productprice}</h4><h4>Quantity: {this.props.quantity}</h4>
+<div className="cartcontainer"><img className= "cartImg" src = {image} ></img></div>
+<div className="cartDetails"><h3>Name: {this.props.title}</h3> <h4>Price: Rs. {this.props.productprice}</h4><h4>Quantity: {this.props.quantity}</h4>
 <h4 >Status: {this.props.status}</h4>
 <h4>Order Date: {this.props.createdDate}</h4>
  </div>
@@ -96,7 +96,7 @@ class Orders extends React.Component {
             <div style={{minHeight: "calc(100vh - 25px)"}}>
             <NavBar/>
             <div style={{fontSize: "20px",margin:"20px",display:"flex",justifyContent:"center",paddingTop: "40vh"}}>
-                You have not ordered anything yet !!!!
+                There are no orders yet !
                 </div>
                 </div>
                 <Footer/>

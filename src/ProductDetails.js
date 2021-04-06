@@ -13,24 +13,24 @@ const src = this.props.title;
 const image = `/images/${src}.jpg`;
 return (
   <div>
-    <div class="prodDetailsgrid">
+    <div className="prodDetailsgrid">
   <div >   
-<img class= "detailsImg" src={image} />
+<img className= "detailsImg" src={image} />
 </div>
 
-<div class="priceDetails">
+<div className="priceDetails">
 <h1>{this.props.title}</h1><h2>({this.props.category})</h2>
 
 <h3><strike>Price Rs. {this.props.list_price} </strike></h3> 
 
 <h3>Price Rs. {this.props.price}</h3>
 <p>Expect delivery within 7 business days.</p>
-<button class="AddCartBtn"
+<button className="AddCartBtn"
     onClick={() => addToCartClick(this.props.product_id)} >ADD TO CART</button>
 </div>
 </div>
 
-<div class= "prodDesc">
+<div className= "prodDesc">
 <h3>Description</h3>
 <hr></hr>
   {this.props.description}</div>
