@@ -77,7 +77,6 @@ class ProductDetails extends React.Component {
             <div>
               <div style={{minHeight: "calc(100vh - 31px)"}}>
                 <NavBar/>
-                 
                   <ProductDetail
                   title={this.state.products.title}
                   category={this.state.products.category}

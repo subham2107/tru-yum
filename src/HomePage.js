@@ -12,9 +12,11 @@ class HomePage extends React.Component {
   render() {
     return (
       <div className="HomePage">
+        <div style={{minHeight: "calc(100vh - 31px)"}}>
         <NavBar/>
         <Banner/>
         <Product/>
+        </div>
         <Footer/>
       </div>
     );
