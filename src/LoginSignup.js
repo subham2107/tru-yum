@@ -2,6 +2,7 @@ import React from 'react';
 import './LoginSignup.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import './index.css';
 
 
 class LoginSignup extends React.Component {
@@ -49,15 +50,7 @@ class LoginSignup extends React.Component {
   }
 
   onSignupClick = e => {
-    // e.preventDefault();
-    // const { email, password } = this.state;
-    // fetch('/api/users', {
-    //   method: 'POST',
-    //   body: JSON.stringify({ email, password }),
-    //   headers: {
-    //     'Content-type': 'application/json; charset=UTF-8'
-    //   }
-    // });
+    e.preventDefault();
     window.location = '/signup';
   }
 

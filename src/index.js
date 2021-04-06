@@ -10,7 +10,6 @@ import ProductDetails from './ProductDetails';
 import AddtoCart from './AddtoCart';
 import MyCart from './MyCart';
 import Shipping from './Shipping';
-import PlaceOrder from './PlaceOrder';
 import Orders from './Orders';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
@@ -29,7 +28,6 @@ function App() {
           <Route exact path="/cart/cartitems" component={MyCart} />
           <Route exact path="/cart/:productid" component = {AddtoCart} />
           <Route exact path="/shipping" component = {Shipping} />
-          <Route exact path="/placeorder" component = {PlaceOrder} />
           <Route exact path="/orders/myorders" component = {Orders} />
         </Switch>
     </Router>

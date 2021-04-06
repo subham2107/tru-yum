@@ -2,7 +2,7 @@ import React from "react";
 import "./Banner.css";
 import AliceCarousel from 'react-alice-carousel';
 import "react-alice-carousel/lib/alice-carousel.css";
-
+import './index.css';
 function Banner() {
   return (
     <div className="App">

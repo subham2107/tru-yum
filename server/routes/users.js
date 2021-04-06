@@ -6,11 +6,9 @@ const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 
 router.get('/name', (req,res) => {
-    console.log(req.session.userId);
+
     User.findOne({_id : req.session.userId}).then(user => {
         if(user){
-            console.log("Inside get name");
-            console.log(user);
         res.status(200).send({firstname : user.firstname});
         }
         else

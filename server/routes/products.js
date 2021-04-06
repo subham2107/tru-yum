@@ -19,7 +19,6 @@ router.get('/:productId', (req, res) => {
 });
 
 router.get('/categories/:categoryname', (req,res) => {
-  console.log(req.params.categoryname)
   Product.find({ category: req.params.categoryname})
   .then(user => {       
          if(!user) {       

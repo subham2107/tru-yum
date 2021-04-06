@@ -3,6 +3,7 @@ import React from 'react';
 import './Signup.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import './index.css';
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
@@ -14,15 +15,6 @@ class SignUp extends React.Component {
     };
   }
 
-  componentDidMount() {
-    // fetch('/api/users/me').then(user => {
-    //   if (user.status === 200) {
-    //     localStorage.setItem('user', "Subham");
-    //     window.location = '/';
-    //     //window.location = '/profile';
-    //   }
-    // });
-  }
 
   onInput = event => {
     this.setState({ [event.target.name]: event.target.value });

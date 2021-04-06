@@ -21,7 +21,7 @@ router.get('/myorders', (req,res) => {
     
     Order.find({user_id : req.session.userId}).then(
         order => {
-            console.log(order)
+            
             if(order)
             res.send(order);
             else{
@@ -32,7 +32,7 @@ router.get('/myorders', (req,res) => {
 })
 
 router.get('/:orderid', (req, res) => {
-  console.log(req.session)
+  
   Order.findOne({ _id: req.params.orderid}).then(order => {
       if(order)
       res.send(order);
@@ -46,7 +46,6 @@ router.get('/:orderid', (req, res) => {
 router.post('/', auth.authenticate,(req, res) => {
     Cart.findOne({ _id: req.session.cartId }).then(cart => {
         const { items, totalprice } = cart;
-        console.log(totalprice);
         const amount = totalprice * 100;
         const order = new Order({ user_id: req.session.userId, amount, currency, status: 'CREATED', items });
         order.save().then(() => {
@@ -83,17 +82,17 @@ router.post('/', auth.authenticate,(req, res) => {
     });
 });
 
-router.put('/orders/:id', auth.authenticate, (req, res) => {
+router.put('/:id', auth.authenticate, (req, res) => {
     const orderId = req.params.id;
     const { razorpay_payment_id, razorpay_order_id, razorpay_signature } = req.body;
     if (!razorpay_payment_id || !razorpay_signature) {
         res.status(400).error({ error: "Missing razorpay payment id or signature" });
         return;
     }
-    const generated_signature = crypto.createHmac('sha256', secret).update(orderId + "|" + razorpay_payment_id).digest('hex');
+    const generated_signature = crypto.createHmac('sha256', secret).update(razorpay_order_id + "|" + razorpay_payment_id).digest('hex');
     if (generated_signature === razorpay_signature) {
-        Order.updateOne({ id: orderId }, { $set: { status: 'COMPLETED', razorpay_payment_id, razorpay_order_id, razorpay_signature }}).then(() => {
-            res.send(204).send();
+        Order.updateOne({ _id: orderId }, { $set: { status: 'COMPLETED', razorpay_payment_id, razorpay_order_id, razorpay_signature }}).then(() => {
+            res.status(204).send();
         });
     } else {
         res.status(400).send({ error: 'Signature validation failed' });

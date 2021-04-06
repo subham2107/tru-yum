@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+}
 .shippingformBtn {
   background-color: #276ef1;
   color: #fff;
@@ -11,6 +17,8 @@
   min-width: 90px;
   max-width: 90px;
   margin-left: 130px;
+  margin-top: 50px;
+  
 }
 
 
@@ -19,7 +27,7 @@
   position: absolute;
 
   width: 300px;
-  height: 300px;
+  height: 400px;
 
   /* Center form on page horizontally & vertically */
   top: 50%;
@@ -30,12 +38,32 @@
 
 .shipping_form {
   width: 350px;
-  height: 350px;
+  height: 250px;
 
   background: #fff;
   border-radius: 5px;
   border: solid 1px;
   
+}
+
+.cityInput{
+  width: 150px;
+  margin-left: 58px
+}
+
+.pcInput{
+  width: 150px;
+  
+}
+
+.stateInput{
+  width: 150px;
+  margin-left: 48px
+}
+
+.countryInput{
+  width: 150px;
+  margin-left: 30px
 }
 
 .shippingCity {

@@ -1,81 +1,98 @@
 import React from 'react';
 import './Product.css';
+import './index.css';
+import { Link } from 'react-router-dom';
 
 function Product (){
 
-  // const input=document.querySelector('#input');
-  // const buttonMinus = document.querySelector('#button-minus');
-  // buttonMinus.addEventListener('click', event => {
-  //             input.value--;
-  // });
-  // const buttonPlus = document.querySelector('#button-plus');
-  // buttonPlus.addEventListener('click', event => {
-  //             input.value++;
-  // });
 
   return (
     <div>
       <h1 style ={{textAlign: "center"}}>Most popular</h1>
       <main class="main-content">
 <div class="card">
-  <a href="/products/605a37864a2a8cb97b9fd67b">
+  <Link to="/products/605a37864a2a8cb97b9fd67b">
   <div class="img-wrapper">
   <img class="card-img" src="/images/Potato.jpg"/>
 </div>
-  <p>Potato</p></a>
+  <p>Potato</p></Link>
   
 </div>
 
 
 <div class="card" >
-  <a href="/products/605a37864a2a8cb97b9fd67c">
+  <Link to="/products/605a37864a2a8cb97b9fd67c">
   <div class="img-wrapper">
   <img class="card-img" src="/images/Onion.jpg"/>
   </div>
-  <p>Onion</p> </a>
+  <p>Onion</p> </Link>
 </div>
 
 <div class="card" >
-  <a href="/products/605a37864a2a8cb97b9fd67d" >
+  <Link to="/products/605a37864a2a8cb97b9fd67d" >
   <div class="img-wrapper">
   <img class="card-img" src="/images/Cabbage.jpg"/>
 </div>
   
-  <p>Cabbage</p></a>
+  <p>Cabbage</p></Link>
 </div>
 
 <div class="card">
-  <a href="/products/605a37864a2a8cb97b9fd67e">
+  <Link to="/products/605a37864a2a8cb97b9fd67e">
   <div class="img-wrapper">
   <img class="card-img" src="/images/Cauliflower.jpg"/>
 </div>
-  <p>Cauliflower</p></a>
+  <p>Cauliflower</p></Link>
 </div>
 
 <div class="card" >
-<a href="/products/605a38634a2a8cb97b9fd67f">
+<Link to="/products/605a38634a2a8cb97b9fd67f">
   <div class="img-wrapper">
   <img class="card-img" src="/images/Carrot.jpg"/>
 </div>
-<p>Carrot</p></a>
+<p>Carrot</p></Link>
 </div>
 
   
 <div class="card" >
-<a href="/products/605a38634a2a8cb97b9fd680">
+<Link to="/products/605a38634a2a8cb97b9fd680">
   <div class="img-wrapper">
   <img class="card-img" src="/images/Banana.jpg"/>
 </div>
-  <p>Banana</p></a>
+  <p>Banana</p></Link>
 </div>  
 
 <div class="card">
-  <a href="/products/605a38634a2a8cb97b9fd681" >
+  <Link to="/products/605a3cd94a2a8cb97b9fd685" >
   <div class="img-wrapper">
-  <img class="card-img" src="/images/Apple.jpg"/>
+  <img class="card-img" src="/images/Fish.jpg"/>
 </div>
-  <p>Apple</p></a>
+  <p>Fish</p></Link>
 </div> 
+
+<div class="card">
+  <Link to="/products/605a3dc44a2a8cb97b9fd692" >
+  <div class="img-wrapper">
+  <img class="card-img" src="/images/Chicken-Biryani.jpg"/>
+</div>
+  <p>Chicken Biryani</p></Link>
+</div>
+
+<div class="card">
+  <Link to="/products/605a3d914a2a8cb97b9fd68b" >
+  <div class="img-wrapper">
+  <img class="card-img" src="/images/Sandwich.jpg"/>
+</div>
+  <p>Sandwich</p></Link>
+</div>
+
+<div class="card">
+  <Link to="/products/605a3d914a2a8cb97b9fd689" >
+  <div class="img-wrapper">
+  <img class="card-img" src="/images/Eggs.jpg"/>
+</div>
+  <p>Eggs</p></Link>
+</div>
 
 
   </main>

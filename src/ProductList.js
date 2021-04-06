@@ -3,6 +3,8 @@ import NavBar from './NavBar';
 import Banner from './Banner';
 import Footer from './Footer';
 import './ProductList.css';
+import './index.css';
+
 
 class ListingProduct extends React.Component {
     constructor(props) {
@@ -12,14 +14,12 @@ class ListingProduct extends React.Component {
 
 const src = this.props.title;
 const image = `/images/${src}.jpg`;
-console.log(this.props.price);
-
 
 return (
 
 
 
-<div class="grid-container" onClick={() => categoriesClick(this.props.product_id)}>   
+<div class="grid-container" onClick={() => proListItemClick(this.props.product_id)}>   
 <div class = "grid-item">
   <div>
   <div>
@@ -39,9 +39,8 @@ return (
     
   }
 
-  const categoriesClick = (productid) => {
-    console.log('dsjvjvnvx');
-    console.log(`hi ${productid}`);
+  const proListItemClick = (productid) => {
+   
     return (
       window.location = `/products/${productid}`
    );
@@ -60,15 +59,11 @@ class ProductList extends React.Component {
     async getRandomProducts() {
       const res = await fetch(`/api/products/categories/${this.props.match.params.cartegoryname}`);
       const data = await res.json();
-      console.log(data)
       return data;
     }
     async componentDidMount() {
       const products = await this.getRandomProducts();
-      console.log(products);
       this.setState({ products });
-
-      console.log(this.state.products);
       
     }
     
@@ -83,8 +78,7 @@ class ProductList extends React.Component {
                   quantity={product.quantity}
                   product_id={product._id}
                   price={(product.price.mrp)}
-                  list_price ={product.price.list_price}
-                  //price: {mrp:parseFloat(product[0].price.mrp),list_price:parseFloat(product[0].price.mrp)} 
+                  list_price ={product.price.list_price} 
                   />
               ))}
               </div>

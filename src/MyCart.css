@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 0;
+}
+
 .proceedToCheckoutBtn {
     cursor: pointer;
     margin: 0 5px;
@@ -24,18 +31,18 @@
 }
 
 .cartcontainer{
-  height: 230px;
+  height: 350px;
   width: 170px;
 }
 
 .cartDetails{
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 140px;
   padding: 10px;
 }
 
 .cartImg {
-  height: 230px;
+  height: 350px;
   width: 150px;
 }
 

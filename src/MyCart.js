@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import './MyCart.css';
+import './index.css';
 
 class  MyCarts extends React.Component {
   constructor(props) {
@@ -17,8 +18,6 @@ class  MyCarts extends React.Component {
   <div class="cartcontainer"><img class= "cartImg" src = {image} ></img></div>
   <div class="cartDetails"><h3>{this.props.title}</h3> <h4>Rs. {this.props.price}</h4><h4>Quantity: {this.props.quantity}</h4>
   <button class="removeBtn" onClick={() => onRemoveClick(this.props.product_id)}>REMOVE</button>
-  {/* <div class="_3dY_ZR"><button class="_23FHuj" disabled=""> – </button><div class="_26HdzL"><input type="text" value="1" class="_253qQJ"/></div><button class="_23FHuj"> + </button></div>
-   */}
    </div>
   <div>
     <p class="delP">Delivery in 7 days | Free</p>
@@ -70,16 +69,11 @@ class MyCart extends React.Component {
       
       const res = await fetch(`/api/cart/cartitems`);
       const data = await res.json();
-
-      console.log(data)
-      //console.log(data.items[0].productId)
       return data;
     }
   
     async componentDidMount() {
-    console.log("HiHelllo");
       const cart = await this.getRandomUsers();
-      console.log(cart)
       this.setState({ items : cart.items });
       this.setState({price : cart});
       if(this.state.items){
@@ -89,10 +83,6 @@ class MyCart extends React.Component {
 
    
     render() {
-      //console.log("ggggg")
-      
-      //console.log(arr);
-      //console.log(this.state.items.title)
       
       if(this.state.items){
 

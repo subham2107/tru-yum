@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginSignup from './LoginSignup';
 import './NavBar.css';
+import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 
@@ -43,15 +44,12 @@ async componentDidMount() {
 render() {
 
   const categoriesClick = (category) => {
-    console.log('dsjvjvnvx');
-    console.log(`hi ${category}`);
     return (
       window.location = `/products/categories/${encodeURIComponent(category)}`
    );
 }
 
 const cartClick = () => {
-  console.log('dsjvjvnvx');
   return (
     window.location = `/cart/cartitems`
  );
@@ -59,7 +57,6 @@ const cartClick = () => {
 }
 
 const logoClick = () => {
-  console.log('dsjvjvnvx');
   return (
     window.location = `/`
  );
@@ -130,13 +127,6 @@ else{
 
   <div><img class="cart-icon" onClick={cartClick} src="/images/shopping_cart.png"/>
   <span class="cartCount">({this.state.cartcount})</span></div>
-  <div>
-    {/* <span class="login" onClick={onLoginClick}>Login</span>
-    <span style={{margin: "0 10px 0 10px"}}>/</span>
-    <span class="signup">Signup</span> */}
-    {/* <img src="/images/user-login-icon.png" class="user-icon" onClick={onLoginClick} ></img> */}
-    
-  </div>
   
 </header>
     );
