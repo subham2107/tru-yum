@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+.cartCount {
+  position: absolute;
+}
+
 .SearchBar {
   background-color: #84c225;
   height: 39px;
