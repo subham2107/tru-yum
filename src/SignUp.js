@@ -42,10 +42,10 @@ class SignUp extends React.Component {
       <div className="signup_div">
         <form className="signup_form">
           
-          <div className="signupFname" >First Name: <input  placeholder="first name" name="firstname" required type="text" onInput={this.onInput} value={this.state.firstname}></input></div>
-          <div className="signupLname">Last Name: <input  placeholder="last name" name="lastname" required type="text" onInput={this.onInput} value={this.state.lastname}></input></div>
-          <div className="signupEmail">Email: <input  placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input></div>
-          <div className="signupPass">Password: <input  placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input></div>
+          <div className="signupFname" >First Name: <input  placeholder="first name" name="firstname" required="required" type="text" onInput={this.onInput} value={this.state.firstname}></input></div>
+          <div className="signupLname">Last Name: <input  placeholder="last name" name="lastname" required="required" type="text" onInput={this.onInput} value={this.state.lastname}></input></div>
+          <div className="signupEmail">Email: <input  placeholder="email" name="email" required="required" type="email" onInput={this.onInput} value={this.state.email}></input></div>
+          <div className="signupPass">Password: <input  placeholder="password" name="password" required="required" type="password" onInput={this.onInput} value={this.state.password}></input></div>
           
           <div>
             <input className= "signupformBtn" type="submit" onClick={this.onSignupClick} value="Sign up"></input>

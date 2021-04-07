@@ -62,10 +62,10 @@ class LoginSignup extends React.Component {
         <div className="login_div">
         <form className="login_form">
           
-          <div className="loginEmail">Email: <input placeholder="email" name="email" required type="email" onInput={this.onInput} value={this.state.email}></input></div>
+          <div className="loginEmail">Email: <input placeholder="email" name="email" required="required" type="email" onInput={this.onInput} value={this.state.email}></input></div>
           
           
-          <div className="loginPass">Password: <input placeholder="password" name="password" required type="password" onInput={this.onInput} value={this.state.password}></input></div>
+          <div className="loginPass">Password: <input placeholder="password" name="password" required="required" type="password" onInput={this.onInput} value={this.state.password}></input></div>
           
           <div>
             <input className= "loginBtn" type="submit" onClick={this.onLoginClick} value="Login"></input>
