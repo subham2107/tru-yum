@@ -96,7 +96,7 @@ if (loggedInUser) {
   logout = "Logout"
 }
 else{
-  temp  = "LogIn/SignUp";
+  temp  = "Log-in/Sign-up";
 }
 
 

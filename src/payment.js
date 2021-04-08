@@ -12,6 +12,10 @@ function initiatePayment(paymentHandlers, onOrderCreateFailure) {
           name: 'TruYum',
           image: 'https://img.flaticon.com/icons/png/512/45/45552.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF',
           description: 'E-commerce',
+          prefill: {
+              contact: 9876543210,
+              email: 'truyum.test123@mail.com'
+          },
           theme: {
               color: '#84c225',
           },
