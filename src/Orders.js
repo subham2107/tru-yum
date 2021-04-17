@@ -24,7 +24,7 @@ class Order extends React.Component {
 <div className="cartcontainer"><img className= "cartImg" src = {image} ></img></div>
 <div className="cartDetails"><h3>Name: {this.props.title}</h3> <h4>Price: Rs. {this.props.productprice}</h4><h4>Quantity: {this.props.quantity}</h4>
 <h4 >Status: {this.props.status}</h4>
-<h4>Order Date: {this.props.createdDate}</h4>
+<h4>Order Date: {(new Date(this.props.createdDate)).toDateString()}</h4>
  </div>
 
  <div></div>
