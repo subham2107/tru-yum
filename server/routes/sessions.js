@@ -43,7 +43,7 @@ router.post('/', (req, res) => {
 
 router.delete('/me', (req, res) => {
     delete req.session.userId;
-    delete req.session.cartId;
+    //delete req.session.cartId;
     res.status(204).send();
 });
 

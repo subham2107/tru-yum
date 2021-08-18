@@ -22,9 +22,9 @@ return (
 <div className="grid-container" onClick={() => proListItemClick(this.props.product_id)}>   
 <div className = "grid-item">
   <div>
-  <div>
+  
 <img src = {image}  alt="NotAvailable" height="200px" width = "200px"/>
-</div>
+
 <h4>{this.props.title}</h4> 
 <h4><strike>Price : Rs. {this.props.list_price}</strike> </h4>
 <h4>Price : Rs. {this.props.price} </h4>

@@ -14,7 +14,11 @@ function initiatePayment(paymentHandlers, onOrderCreateFailure) {
           description: 'E-commerce',
           prefill: {
               contact: 9876543210,
-              email: 'truyum.test123@mail.com'
+              email: 'truyum.test123@mail.com',
+            //   method: 'card',
+            //     card[number]: '5267318187975449',
+            //     card[expiry]: '12/26',
+            //     card[cvv]: '123'
           },
           theme: {
               color: '#84c225',
@@ -22,6 +26,16 @@ function initiatePayment(paymentHandlers, onOrderCreateFailure) {
           modal: {
               ondismiss: paymentHandlers.onDismiss || (() => {}),
               escape: false,
+          },
+          options: {
+            checkout: {
+              prefill: {
+                "method": 'card',
+                "card[number]": '5267318187975449',
+                "card[expiry]": '12/26',
+                
+              }
+            }
           },
           handler: response => {
               paymentHandlers.onSuccess &&
