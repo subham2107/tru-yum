@@ -8,6 +8,7 @@ function Banner() {
     <div className="App">
      <AliceCarousel autoPlay activeIndex infinite disableButtonsControls autoPlayInterval="3000">
       <img src="/images/2104007_summer-vegetables_460.jpg" className="sliderimg" alt=""/>
+      <img src="images/HP_EMF_M_Weekendallcities_460_171221.jpg" className="sliderimg" alt=""/>
       <img src="/images/Green_2104013_home-kitchen_460.jpg" className="sliderimg" alt=""/>
       <img src="/images/2104008_melons-mela_460.jpg" className="sliderimg" alt=""/>
       <img src="/images/Green_2104015_dairy_460_SouthWest.jpg" className="sliderimg" alt=""/>
