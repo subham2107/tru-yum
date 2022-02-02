@@ -103,7 +103,7 @@ else{
   return (
     
       <header className="navbar">
-        
+      <div className="companyLogo" onClick={logoClick}>Tru<span className="logoY">Y</span>um</div>
       <div className="dropdown-nav">Categories <span><img className="dropdown-arrow" src="/images/down-arrow.svg"/></span>
   
   <div className="dropdown-content">
@@ -120,7 +120,7 @@ else{
           <span className = "box" onClick={logoutclick}>{logout}</span>
           </div>
       </div>
-  <div className="companyLogo" onClick={logoClick}>Tru<span className="logoY">Y</span>um</div>
+  
   <SearchBar/>
 
   
